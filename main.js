@@ -170,32 +170,6 @@ function addToCart(gridItem){
        updateTotal();
   });
 
-  //Functionality to increment and decrement the item quantity in the cart
-
- /* grid.addEventListener('click', (e) =>{
-    const decrementBtn = e.target.closest('.decrement');
-    const incrementBtn = e.target.closest('.increment');
-    
-
-    if(decrementBtn){
-      itemQuantitySpan = decrementBtn.nextElementSibling;
-      if(itemQuantitySpan && itemQuantitySpan.classList.contains('item-quantity')){
-        let quantity = parseInt(itemQuantitySpan.innerText);
-        if(quantity > 1){
-          itemQuantitySpan.innerText = quantity - 1;
-        }
-      }
-    }
-
-    if(incrementBtn){
-      itemQuantitySpan = incrementBtn.previousElementSibling;
-      if(itemQuantitySpan && itemQuantitySpan.classList.contains('item-quantity')){
-        let quantity = parseInt(itemQuantitySpan.innerText);
-          itemQuantitySpan.innerText = quantity + 1;
-      }
-    }
-  });*/
-
 };
   function updateUI() {
 
@@ -205,18 +179,10 @@ function addToCart(gridItem){
 
     });
 
-   /* itemQuantitySpan.innerText = `${currentQuantity}x`;
-    itemTotalSpan.innerText = `$${(itemPrice * currentQuantity).toFixed(2)}`;
-
-    document.querySelector("#totalItemCount").innerText = `Your Cart (${totalItemCount})`;*/
-
     const totalItemCountElement = document.querySelector('#totalItemCount');
        if (totalItemCountElement) {
           totalItemCountElement.innerText = `Your Cart (${totalItemCount})`;
        } 
-
-     //console.log("Updated UI with total item count:", totalItemCount);
-    //console.log("Inside totalItemCount");
 
     //To control the empty and full cart
 
@@ -238,8 +204,8 @@ function addToCart(gridItem){
 
   function updateTotal() {
     let total = 0;
-    const itemTotals = document.querySelectorAll('.item-total');//.forEach(item => {//FULL CART $5.50
-    //  console.log('number of item-total elements:', itemTotals.length);
+    const itemTotals = document.querySelectorAll('.item-total');
+    
 
       itemTotals.forEach(item =>{
       //  console.log('item-total textContent:', item.textContent);
