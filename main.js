@@ -47,9 +47,7 @@ function toggleButton() {
         const gridItem = cartBtn.closest(".grid-item");
         addToCart(gridItem);
 
-        //const cartSidebar = document.querySelector('.side-wrap');
-        //console.log(cartSidebar, "the sidebar is available");
-
+        
       }
       updateUI();
       updateTotal();
@@ -218,18 +216,14 @@ function addToCart(gridItem){
     const totalAmount = document.querySelector('.total-amount');
      if(totalAmount){
       totalAmount.textContent = `$${total.toFixed(2)}`;
-     // console.log("Updated total amount:", totalAmount.textContent);
-     }//else{
-      //console.log("element with class .total-amount not found");
-    // }
+     
+     }
+      
+    
  }// Call the function initially
      updateTotal();
 
   
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     copyright();
     loadJson('data.json')
@@ -283,8 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             toggleButton();
-           // updateUI();
-           // updateTotal();
+        
 
 
         })
@@ -410,15 +403,15 @@ document.querySelectorAll('.plus-minus-cart').forEach(element => {
 
  // Reset all .item-quantity elements to 1
  document.querySelectorAll('.item-quantity').forEach(quantityField => {
-  quantityField.textContent = "1"; // Sets the input field back to 1
+  quantityField.textContent = "1"; 
 });
 
 
 
 
-const modal = document.querySelector('.modal'); // Select the modal dynamically
+const modal = document.querySelector('.modal'); 
   if(modal) {
-    modal.classList.add('hidden'); // Ensure 'hidden' is correctly applied
+    modal.classList.add('hidden'); 
     }
 });
 
